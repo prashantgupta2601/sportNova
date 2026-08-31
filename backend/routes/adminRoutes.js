@@ -19,7 +19,9 @@ function requireAdmin(req, res) {
 router.get("/users", auth, asyncHandler(async (req, res) => {
   if (!requireAdmin(req, res)) return;
 
-  const { page = 1, limit = 20, role } = req.query;
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 20;
+  const role = req.query.role;
   const skip = (page - 1) * limit;
 
   // Build query

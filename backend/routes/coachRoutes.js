@@ -12,7 +12,9 @@ router.get("/players", auth, asyncHandler(async (req, res) => {
     return res.status(403).json({ message: "Access denied" });
   }
 
-  const { page = 1, limit = 20, sport } = req.query;
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 20;
+  const sport = req.query.sport;
   const skip = (page - 1) * limit;
 
   // Build query
@@ -39,6 +41,10 @@ router.get("/players", auth, asyncHandler(async (req, res) => {
 
 // 2️⃣ GET player performance
 router.get("/player/:id/performance", auth, asyncHandler(async (req, res) => {
+  if (req.user.role !== "coach" && req.user.role !== "admin" && req.user.role !== "scout") {
+    return res.status(403).json({ message: "Access denied" });
+  }
+
   if (!validateObjectId(req.params.id)) {
     return res.status(400).json({ message: "Invalid player ID" });
   }
@@ -51,6 +57,10 @@ router.get("/player/:id/performance", auth, asyncHandler(async (req, res) => {
 
 // 3️⃣ Compare two players
 router.get("/compare", auth, asyncHandler(async (req, res) => {
+  if (req.user.role !== "coach" && req.user.role !== "admin" && req.user.role !== "scout") {
+    return res.status(403).json({ message: "Access denied" });
+  }
+
   const { p1, p2 } = req.query;
 
   if (!validateObjectId(p1) || !validateObjectId(p2)) {

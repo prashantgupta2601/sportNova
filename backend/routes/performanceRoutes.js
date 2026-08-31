@@ -8,6 +8,13 @@ const auth = require("../middleware/authMiddleware");
 const Performance = require("../models/Performance");
 const { validatePerformance } = require("../utils/validators");
 const { asyncHandler } = require("../utils/errorHandler");
+const fs = require("fs");
+
+// Ensure uploads directory exists
+const uploadsDir = path.join(__dirname, "..", "uploads");
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
+}
 
 // ---------- Multer config ----------
 const storage = multer.diskStorage({
@@ -66,7 +73,8 @@ router.post(
 
 // ---------- 2) Player: Get My Performance ----------
 router.get("/my", auth, asyncHandler(async (req, res) => {
-  const { page = 1, limit = 10 } = req.query;
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 10;
   const skip = (page - 1) * limit;
 
   const data = await Performance.find({ userId: req.user.id })
@@ -93,7 +101,9 @@ router.get("/all", auth, asyncHandler(async (req, res) => {
     return res.status(403).json({ message: "Access denied" });
   }
 
-  const { page = 1, limit = 20, sport } = req.query;
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 20;
+  const sport = req.query.sport;
   const skip = (page - 1) * limit;
 
   // Build query

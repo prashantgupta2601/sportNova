@@ -598,8 +598,8 @@ const Stat = ({ icon, label, value, color }) => {
 
 const ComparisonBar = ({ label, p1, p2 }) => {
   const total = p1 + p2;
-  const pct1 = ((p1 / total) * 100).toFixed(1);
-  const pct2 = ((p2 / total) * 100).toFixed(1);
+  const pct1 = total > 0 ? ((p1 / total) * 100).toFixed(1) : "50.0";
+  const pct2 = total > 0 ? ((p2 / total) * 100).toFixed(1) : "50.0";
   const winner = p1 > p2 ? 1 : 2;
 
   return (

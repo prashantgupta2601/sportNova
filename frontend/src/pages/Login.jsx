@@ -91,7 +91,7 @@ export default function Login() {
             <p className="text-slate-400 text-sm">Access your athlete dashboard.</p>
           </div>
 
-          <div className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
 
             {/* Email Input */}
             <div className="space-y-1">
@@ -140,7 +140,7 @@ export default function Login() {
 
             {/* Submit Button */}
             <button
-              onClick={handleSubmit}
+              type="submit"
               disabled={isLoading}
               className="w-full bg-blue-600 hover:bg-blue-500 text-white py-4 rounded-sm skew-x-[-10deg]"
             >
@@ -158,7 +158,7 @@ export default function Login() {
                 )}
               </div>
             </button>
-          </div>
+          </form>
 
           {/* Error Message */}
           {error && (
