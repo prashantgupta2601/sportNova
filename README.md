@@ -1,5 +1,5 @@
 <h1 align="center">
-  ⚡ SportNova
+  ⚡SportNova ⚡
 </h1>
 
 <p align="center">
