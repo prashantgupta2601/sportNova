@@ -40,7 +40,7 @@ export default function Contact() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <motion.a 
-              href="mailto:shivamkumarp447@gmail.com" 
+              href="mailto:prashantguptagzp2708@gmail.com" 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -56,14 +56,14 @@ export default function Contact() {
                   <p className="text-sm text-blue-400">24/7 Response</p>
                 </div>
               </div>
-              <p className="text-slate-300 mb-2 font-medium">shivamkumarp447@gmail.com</p>
+              <p className="text-slate-300 mb-2 font-medium">prashantguptagzp2708@gmail.com</p>
               <span className="text-blue-400 text-sm font-bold uppercase group-hover:underline flex items-center gap-2">
                 Send Message <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
             </motion.a>
 
             <motion.a 
-              href="tel:+918252980774" 
+              href="tel:+917309211871" 
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -79,7 +79,7 @@ export default function Contact() {
                   <p className="text-sm text-green-400">Mon-Sat 9AM-6PM</p>
                 </div>
               </div>
-              <p className="text-slate-300 mb-2 font-medium">+91 82529 80774</p>
+              <p className="text-slate-300 mb-2 font-medium">+91 7309211871</p>
               <span className="text-green-400 text-sm font-bold uppercase group-hover:underline flex items-center gap-2">
                 Call Now <Phone className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </span>

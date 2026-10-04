@@ -1,0 +1,18 @@
+# Environment secrets
+.env
+
+# Dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Uploaded files (ephemeral on Azure App Service — use Blob Storage in production)
+uploads/
+
+# Deployment artifact
+backend.zip
+
+# Build output
+dist/

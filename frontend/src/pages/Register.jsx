@@ -249,7 +249,7 @@ export default function Register() {
               Already have an account? <Link to="/login" className="text-blue-400 hover:text-white transition-colors font-bold uppercase italic tracking-wider ml-1 hover:underline decoration-blue-500 underline-offset-4">Sign In</Link>
             </p>
             <p className="text-xs text-slate-600 mt-4">
-              Need help? <a href="mailto:shivamkumarp447@gmail.com" className="hover:text-slate-400 transition-colors">Contact Support</a>
+              Need help? <a href="mailto:prashantguptagzp2708@gmail.com" className="hover:text-slate-400 transition-colors">Contact Support</a>
             </p>
           </div>
         </div>

@@ -17,6 +17,11 @@ if (!fs.existsSync(uploadsDir)) {
 }
 
 // ---------- Multer config ----------
+// TODO (Azure Production): Files saved to local disk are EPHEMERAL on Azure App Service.
+// They will be lost on every restart/scale-out event.
+// Replace multer.diskStorage with Azure Blob Storage (e.g. @azure/storage-blob or multer-azure-blob-storage)
+// or use the "Video URL" option so players paste an external hosted link instead of uploading a file.
+// See README.md → "Production: Video Uploads" for details.
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, "..", "uploads"));

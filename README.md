@@ -319,7 +319,47 @@ All protected routes require the header: `Authorization: Bearer <token>`
 
 ---
 
+## ☁️ Azure Deployment Notes
+
+| Component | Azure Service |
+|-----------|--------------|
+| Frontend (React/Vite) | Azure Static Web Apps |
+| Backend (Express) | Azure App Service (Node 18+) |
+| Database | MongoDB Atlas (external) |
+
+### Environment variables
+
+**Backend** — set these in App Service → Configuration → Application Settings:
+
+| Variable | Description |
+|----------|-------------|
+| `MONGO_URI` | MongoDB Atlas connection string |
+| `PORT` | Set by Azure automatically — do **not** override |
+| `JWT_SECRET` | Strong random secret |
+| `GEMINI_API_KEY` | Google Gemini API key |
+| `OPENAI_API_KEY` | OpenAI API key (fallback) |
+| `NODE_ENV` | `production` |
+| `FRONTEND_URL` | Your Static Web App URL (comma-separated for multiple) |
+
+**Frontend** — set in Static Web Apps → Configuration:
+
+| Variable | Description |
+|----------|-------------|
+| `VITE_API_URL` | Full URL of your App Service backend (e.g. `https://sportnova-api.azurewebsites.net`) |
+
+### ⚠️ Production: Video Uploads
+
+Video files uploaded via **Performance Logging → Upload Video File** are saved to the local `uploads/` directory using Multer `diskStorage`.  
+**On Azure App Service, this storage is ephemeral** — files are lost on every restart or scale-out event.
+
+**Recommended approach for production:**  
+Use the **"Video URL"** option in the Performance Logging form to paste an externally hosted video link (YouTube, Azure Blob Storage public URL, etc.).  
+To support file uploads in production, replace `multer.diskStorage` in `backend/routes/performanceRoutes.js` with [Azure Blob Storage](https://www.npmjs.com/package/multer-azure-blob-storage) or `@azure/storage-blob`.
+
+---
+
 ## 🤝 Contributing
+
 
 Contributions are welcome! Please follow these steps:
 

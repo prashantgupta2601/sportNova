@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
@@ -9,11 +8,7 @@ import {
   Award, Target, Sparkles, RefreshCw, Calendar, Clock
 } from "lucide-react";
 import SportsRecommendations from "../components/SportsRecommendations";
-
-// REAL API
-const api = axios.create({
-  baseURL: "http://localhost:5000",
-});
+import api from "../api/api";
 
 // --------------------- CHART - Enhanced ---------------------
 const PerformanceChart = ({ data }) => {
@@ -524,7 +519,7 @@ export default function Dashboard() {
                               <motion.a
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                href={`http://localhost:5000${p.videoFile}`}
+                                href={`${import.meta.env.VITE_API_URL || "http://localhost:5000"}${p.videoFile}`}
                                 target="_blank"
                                 rel="noreferrer"
                                 className="p-2 bg-green-500/20 border border-green-500/30 rounded-lg hover:bg-green-500/30 transition-colors"

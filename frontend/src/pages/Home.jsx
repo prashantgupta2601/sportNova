@@ -67,7 +67,7 @@ export default function Home() {
     if (type === "privacy") {
       setModalContent({
         title: "Privacy Policy",
-        content: "1. Data Collection\nWe collect performance data, videos, and profile details.\n\n2. Game Analysis\nUsed strictly for AI insights.\n\nContact: shivamkumarp447@gmail.com",
+        content: "1. Data Collection\nWe collect performance data, videos, and profile details.\n\n2. Game Analysis\nUsed strictly for AI insights.\n\nContact: prashantguptagzp2708@gmail.com",
       });
     } else if (type === "terms") {
       setModalContent({
@@ -77,7 +77,7 @@ export default function Home() {
     } else {
       setModalContent({
         title: "Support",
-        content: "We're available 24/7.\n\nEmail: shivamkumarp447@gmail.com\nPhone: +91 8252980774",
+        content: "We're available 24/7.\n\nEmail: prashantguptagzp2708@gmail.com\nPhone: +91 7309211871",
       });
     }
     setModalOpen(true);
@@ -263,7 +263,7 @@ function ContactSection() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <motion.a href="mailto:shivamkumarp447@gmail.com" initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, delay: 0.2 }} whileHover={{ scale: 1.02, translateY: -5 }} className="group bg-gradient-to-br from-slate-900 to-slate-800 p-8 border border-blue-500/20 rounded-lg hover:border-blue-500/50 transition-all shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]">
+          <motion.a href="mailto:prashantguptagzp2708@gmail.com" initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, delay: 0.2 }} whileHover={{ scale: 1.02, translateY: -5 }} className="group bg-gradient-to-br from-slate-900 to-slate-800 p-8 border border-blue-500/20 rounded-lg hover:border-blue-500/50 transition-all shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-14 h-14 bg-blue-500/20 rounded-lg flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
                 <Mail className="w-7 h-7 text-blue-400" />
@@ -273,11 +273,11 @@ function ContactSection() {
                 <p className="text-sm text-blue-400">24/7 Response</p>
               </div>
             </div>
-            <p className="text-slate-300 mb-2 font-medium">shivamkumarp447@gmail.com</p>
+            <p className="text-slate-300 mb-2 font-medium">prashantguptagzp2708@gmail.com</p>
             <span className="text-blue-400 text-sm font-bold uppercase group-hover:underline flex items-center gap-2">Send Message <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
           </motion.a>
 
-          <motion.a href="tel:+918252980774" initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, delay: 0.3 }} whileHover={{ scale: 1.02, translateY: -5 }} className="group bg-gradient-to-br from-slate-900 to-slate-800 p-8 border border-green-500/20 rounded-lg hover:border-green-500/50 transition-all shadow-lg hover:shadow-[0_0_30px_rgba(34,197,94,0.2)]">
+          <motion.a href="tel:+917309211871" initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.6, delay: 0.3 }} whileHover={{ scale: 1.02, translateY: -5 }} className="group bg-gradient-to-br from-slate-900 to-slate-800 p-8 border border-green-500/20 rounded-lg hover:border-green-500/50 transition-all shadow-lg hover:shadow-[0_0_30px_rgba(34,197,94,0.2)]">
             <div className="flex items-center gap-4 mb-4">
               <div className="w-14 h-14 bg-green-500/20 rounded-lg flex items-center justify-center group-hover:bg-green-500/30 transition-colors">
                 <Phone className="w-7 h-7 text-green-400" />
@@ -287,7 +287,7 @@ function ContactSection() {
                 <p className="text-sm text-green-400">Instant Connect</p>
               </div>
             </div>
-            <p className="text-slate-300 mb-2 font-medium">+91 8252980774</p>
+            <p className="text-slate-300 mb-2 font-medium">+91 7309211871</p>
             <span className="text-green-400 text-sm font-bold uppercase group-hover:underline flex items-center gap-2">Call Now <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
           </motion.a>
         </div>
@@ -319,8 +319,8 @@ function FooterSection({ openModal }) {
             <p className="text-slate-400 leading-relaxed mb-6 max-w-md">Empowering athletes worldwide with cutting-edge AI technology and connecting talent with opportunities. Your journey to greatness starts here.</p>
             <div className="flex gap-4">
               <motion.a href="#" whileHover={{ scale: 1.1, y: -2 }} className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"><Globe className="w-5 h-5" /></motion.a>
-              <motion.a href="mailto:shivamkumarp447@gmail.com" whileHover={{ scale: 1.1, y: -2 }} className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"><Mail className="w-5 h-5" /></motion.a>
-              <motion.a href="tel:+918252980774" whileHover={{ scale: 1.1, y: -2 }} className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"><Phone className="w-5 h-5" /></motion.a>
+              <motion.a href="mailto:prashantguptagzp2708@gmail.com" whileHover={{ scale: 1.1, y: -2 }} className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"><Mail className="w-5 h-5" /></motion.a>
+              <motion.a href="tel:+917309211871" whileHover={{ scale: 1.1, y: -2 }} className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"><Phone className="w-5 h-5" /></motion.a>
             </div>
           </div>
 
