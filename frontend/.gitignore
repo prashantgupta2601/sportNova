@@ -1,0 +1,11 @@
+# Environment files — never commit real secrets
+.env
+.env.*
+# But allow the example template
+!.env.example
+
+# Build output
+dist/
+
+# Dependencies
+node_modules/
